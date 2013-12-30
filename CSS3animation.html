@@ -5,8 +5,8 @@
 <title>CSS3 animation bird</title>
 <style type="text/css">
 body{
-background:#4c0854;	
-outline:none;
+    background:#4c0854;	
+    outline:none;
 }
 .wrapper {
     height: 250px;
@@ -16,74 +16,32 @@ outline:none;
     top: 50%;
     width: 250px;
 }
-.beak{
-    background-color: #FCAC39;
-    border-radius: 0 25px;
-    height: 55px;
-    position: absolute;
-    top: 35px;
-    width: 75px;
-    z-index: -1;
-	right:-30px;
-	
-	}
-	.bird:hover .beak:after {
-    animation-play-state: running;outline:none;
-	-webkit-animation-play-state:running;
-}
-@-moz-keyframes open {
-50% {
-    transform: rotate(45deg);
-	
-}
-}
-@-webkit-keyframes open {
-50% {
-   
-	-webkit-transform:rotate(45deg);
-}
-}
-	.beak:after{
-	animation: 0.5s linear 0s normal none infinite open;
-    animation-play-state: paused;
-	-webkit-animation: open .5s linear infinite;
--webkit-animation-play-state: paused;
-    background-color: #E99138;
-    border-radius:25px  0;
-    content: "";
-    display: block;
-    height: 25px;
-    margin-right: -17px;
-    position: absolute;
-    right: 32%;
-    top: 100%;
-    width: 50px;outline:none;}
 
 .bird
 {
-background:#8d2299;
-width:200px;
-height:275px;	
-position:relative;
-border-radius:40% 40% 40% 0;
+    background:#8d2299;
+    width:200px;
+    height:275px;	
+    position:relative;
+    border-radius:40% 40% 40% 0;
 }
 
 
 .bird:before{
-position:absolute;top:0;
-height:25px;
-width:25px;
-background:#4c0854;
-z-index:2;
-content:"";
-top:50px;
-left:120px;	
-border-radius:50%;
+    position:absolute;top:0;
+    height:25px;
+    width:25px;
+    background:#4c0854;
+    z-index:2;
+    content:"";
+    top:50px;
+    left:120px;	
+    border-radius:50%;
 
 }
 
 .bird:after{
-  background: none repeat scroll 0 0 #8D2299;
+    background: none repeat scroll 0 0 #8D2299;
     border-radius: 20px 0;
     content: "";
     height: 50px;
@@ -107,13 +65,87 @@ border-radius:50%;
     width: 250px;
 	
 }
+div.beak {    
+   background-color: #FCAC39;
+    border-radius: 0 25px;
+    height: 55px;
+    position: absolute;
+    top: 35px;
+    width: 75px;
+    z-index: -1;
+	right:-30px;
+}
+
+div.beak:after{
+    background-color: #E99138;
+    border-radius:25px  0;
+    content: "";
+    display: block;
+    height: 25px;
+    margin-right: -17px;
+    position: absolute;
+    right: 32%;
+    top: 100%;
+    width: 50px;outline:none;  
+    
+    animation: 0.5s linear 0s normal none infinite open;
+    animation-play-state: paused;
+    
+	-webkit-animation: open .5s linear infinite;
+    -webkit-animation-play-state: paused;
+    
+    -moz-animation: open .5s linear infinite;
+    -moz-animation-play-state: paused;
+    
+    -ms-animation: open .5s linear infinite;
+    -ms-animation-play-state: paused;
+}
+
+
+.bird:hover .beak:after {
+
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -ms-animation-play-state: running;
+     -o-animation-play-state: running;
+     animation-play-state: running;
+     
+     -webkit-transform:rotate(45deg);
+     -o-transform:rotate(45deg);
+}
+
+@keyframes open {
+   50% {
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* IE 9 */
+        -webkit-transform:rotate(45deg); /* Safari and Chrome */
+        
+    }
+}
+
+
+@-moz-keyframes open {
+   50% {
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); /* IE 9 */
+        -webkit-transform:rotate(45deg); /* Safari and Chrome */
+        
+    }
+}
+
+@-webkit-keyframes open {   
+    50% {        
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg); 
+        -webkit-transform:rotate(45deg);        
+        }
+}
 
 
 </style>
 </head>
 
 <body>
-
 
 <div class="wrapper">
 <div class="bird">
